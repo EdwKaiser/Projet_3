@@ -1,0 +1,95 @@
+
+body{
+    background-color: rgba(255, 254, 248, 1);
+}
+header {
+ margin-bottom: 0px;
+}
+
+
+
+header a{
+    text-decoration: none;
+
+}
+main {
+    margin-top: 150px;
+    margin-bottom: 355px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.form_connection {
+
+    display:flex;
+    flex-direction: column; 
+    align-items: center;
+    width: 40%;
+
+}
+
+#loginTitle {
+
+    margin-bottom: 60px ;
+    color:#1D6154;
+    font-family: Syne;
+    font-size: 30px;
+    height: 36px;
+    font-weight: 700;
+    line-height: normal;
+}
+form {
+
+    display: flex;
+    flex-direction: column;
+    gap: 52px;
+    width: 100%;
+
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+}
+form label {
+    color:#3D3D3D;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: work sans;
+}
+form input  {
+    height: 51px;
+    border: none;
+    box-shadow: 0px 4px 14px 0px  rgba(0, 0, 0, 0.09);
+}
+form button {
+    border:none;
+    align-self: center; 
+    width: auto;
+    color: white;
+    background-color:#1D6154 ;
+    border-radius: 60px;
+    padding: 10px 38px;
+    font-family: Syne;
+    font-size: 14px;
+    font-weight:700 ;
+}
+.form_connection a{
+    margin-top: 28px;
+    color:#3D3D3D ;
+}
+#error {
+    width: 100%;
+    margin-top: -15px;
+    margin-bottom: 10px;
+}
+.error {
+    color:red;
+}
+.input_error {
+    box-shadow: 0px 0px 10px red;
+}

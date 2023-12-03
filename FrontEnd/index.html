@@ -9,101 +9,109 @@
 	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
 	<meta name="description" content="">
 	<link rel="stylesheet" href="./assets/style.css">
+	<link rel="stylesheet" href="./assets/afterLogin.css">
+	<link rel="stylesheet" href="./assets/overlay.css">
+	<!--<script type="module" src ="./AncienScript/script.js" defer></script>
+	<script type="module" src ="./AncienScript/afterLogin.js" defer></script>
+	<script type="module" src ="./AncienScript/overlay.js" defer></script>
+	<script type="module" src ="./AncienScript/ajouterPhoto.js" defer></script>-->
+	<script type="module" src ="./NouveauScript/main.js" defer></script>
 </head>
 <body>
-<header>
-	<h1>Sophie Bluel <span>Architecte d'inteérieur</span></h1>
-	<nav>
-		<ul>
-			<li>projets</li>
-			<li>contact</li>
-			<li>login</li>
-			<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
-		</ul>
-	</nav>
-</header>
-<main>
-	<section id="introduction">
-		<figure>
-			<img src="./assets/images/sophie-bluel.png" alt="">
-		</figure>
-		<article>
-			<h2>Designer d'espace</h2>
-			<p>Je raconte votre histoire, je valorise vos idées. Je vous accompagne de la conception à la livraison finale du chantier.</p>
-			<p>Chaque projet sera étudié en commun, de façon à mettre en valeur les volumes, les matières et les couleurs dans le respect de l’esprit des lieux et le choix adapté des matériaux. Le suivi du chantier sera assuré dans le souci du détail, le respect du planning et du budget.</p>
-			<p>En cas de besoin, une équipe pluridisciplinaire peut-être constituée : architecte DPLG, décorateur(trice)</p>
-		</article>
-	</section>
-	<section id="portfolio">
-		<h2>Mes Projets</h2>
-		<div class="gallery">
+	<div id="overlay">
+		<div id="modale_edit">
+			<div id="mark">
+				<img id="back_mark" src="./assets/icons/arrow-left.png">
+				<img id="xmark" src="./assets/icons/xmark.png">
+			</div>
+			<div id="add_picture">
+				<h3>Ajout photo</h3>
+				<div id="select_pic">
+					<img src="./assets/icons/picture-svgrepo-com 1.png">
+					<input type="file" id="file_input" style="display: none;">
+					<img src="" style="display: none;">
+					<button>+ Ajouter photo</button>
+					<p>jpg, png : 4mo max</p>
+				</div>
+				<label for="title" class="labelAjout">Titre</label>
+				<input id="title_add_pic" name="title" class="add_work_input">
+				<label for="categorie" class="labelAjout">Catégorie</label>
+				<select name="categorie" id="categorie_select" class="add_work_input">
+				</select>
+				<datalist id="datalist_categorie">
+				</datalist>
+				<div id="separator">
+				</div>
+				<button id="confirm_add_pic" class="button_in_edit">Valider</button>
+			</div>
+			<div id="div_gallery">
+				<h3>Galerie photo</h3>
+				<div id="gallery_edit">
+				</div>
+				<div id="separator">
+				</div>
+				<button id = "add_work" class="button_in_edit">Ajouter une photo</button>
+				<a id="delete_gallery">Supprimer la galerie</a>
+			</div>
+		</div>   
+	</div> 
+	<header>
+		<h1>Sophie Bluel <span>Architecte d'inteérieur</span></h1>	
+		<nav>
+			<ul>
+				<a href="index.html"><li>projets</li></a>
+				<a href="#contact"><li>contact</li></a>
+				<a href="login.html"><li id = "login_logout">login</li></a>
+				<a href=""><li class = "icone_instagram"><img src="./assets/icons/instagram.png" alt="Instagram"></li></a>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section id="introduction">
 			<figure>
-				<img src="assets/images/abajour-tahina.png" alt="Abajour Tahina">
-				<figcaption>Abajour Tahina</figcaption>
+				<img id = "bluelImage" src="./assets/images/sophie-bluel.png" alt="">
 			</figure>
-			<figure>
-				<img src="assets/images/appartement-paris-v.png" alt="Appartement Paris V">
-				<figcaption>Appartement Paris V</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/restaurant-sushisen-londres.png" alt="Restaurant Sushisen - Londres">
-				<figcaption>Restaurant Sushisen - Londres</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/la-balisiere.png" alt="Villa “La Balisiere” - Port Louis">
-				<figcaption>Villa “La Balisiere” - Port Louis</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/structures-thermopolis.png" alt="Structures Thermopolis">
-				<figcaption>Structures Thermopolis</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/appartement-paris-x.png" alt="Appartement Paris X">
-				<figcaption>Appartement Paris X</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/le-coteau-cassis.png" alt="Pavillon “Le coteau” - Cassis">
-				<figcaption>Pavillon “Le coteau” - Cassis</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/villa-ferneze.png" alt="Villa Ferneze - Isola d’Elba">
-				<figcaption>Villa Ferneze - Isola d’Elba</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/appartement-paris-xviii.png" alt="Appartement Paris XVIII">
-				<figcaption>Appartement Paris XVIII</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/bar-lullaby-paris.png" alt="Bar “Lullaby” - Paris">
-				<figcaption>Bar “Lullaby” - Paris</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/hotel-first-arte-new-delhi.png" alt="Hotel First Arte - New Delhi">
-				<figcaption>Hotel First Arte - New Delhi</figcaption>
-			</figure>
-		</div>
-	</section>
-	<section id="contact">
-		<h2>Contact</h2>
-		<p>Vous avez un projet ? Discutons-en !</p>
-		<form action="#" method="post">
-			<label for="name">Nom</label>
-			<input type="text" name="name" id="name">
-			<label for="email">Email</label>
-			<input type="email" name="email" id="email">
-			<label for="message">Message</label>
-			<textarea name="message" id="message" cols="30" rows="10"></textarea>
-			<input type="submit" value="Envoyer">
-		</form>
-	</section>
-</main>
+			<article>
+				<h2>Designer d'espace</h2>
+				<p>Je raconte votre histoire, je valorise vos idées. Je vous accompagne de la conception à la livraison finale du chantier.</p>
+				<p>Chaque projet sera étudié en commun, de façon à mettre en valeur les volumes, les matières et les couleurs dans le respect de l’esprit des lieux et le choix adapté des matériaux. Le suivi du chantier sera assuré dans le souci du détail, le respect du planning et du budget.</p>
+				<p>En cas de besoin, une équipe pluridisciplinaire peut-être constituée : architecte DPLG, décorateur(trice)</p>
+			</article>
+		</section>
+		<section id="portfolio">
+			<div id ="titleProjet">
+				<h2>Mes Projets</h2>
+			</div>
+			<ul>
+				<li><button id = "btn_filter_all">Tous</button></li>
+				<li><button id = "btn_filter_object">Objets</button></li>
+				<li><button id = "btn_filter_appartement">Appartements</button></li>
+				<li><button id = "btn_filter_hotels_and_restaurants">Hôtels & restaurants</button></li>
+			</ul>
+			<div class="gallery">
+			</div>
+		</section>
+		<section id="contact">
+			<h2>Contact</h2>
+			<p>Vous avez un projet ? Discutons-en !</p>
+			<form action="#" method="post">
+				<label for="name">Nom</label>
+				<input type="text" name="name" id="name">
+				<label for="email">Email</label>
+				<input type="email" name="email" id="email">
+				<label for="message">Message</label>
+				<textarea name="message" id="message" cols="30" rows="10"></textarea>
+				<input type="submit" value="Envoyer">
+			</form>
+		</section>
+	</main>
 
-<footer>
-	<nav>
-		<ul>
-			<li>Mentions Légales</li>
-		</ul>
-	</nav>
+	<footer>
+		<nav>
+			<ul>
+				<li>Mentions Légales</li>
+			</ul>
+		</nav>
 </footer>
 </body>
 </html>

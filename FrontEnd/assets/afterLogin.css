@@ -1,0 +1,66 @@
+#div_modale {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 59px;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    gap: 21px;
+    z-index: 1;
+}
+
+#div_modale {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#modale {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 11px;
+}
+#div_modale img {
+    height: 15.5px;
+}
+#div_modale p {
+    color: white;
+}
+#div_modale button {
+    border-radius: 60px;
+    background-color: white;
+    border: none;
+    padding: 11px 23px;
+}
+#introduction figure{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+#edit {
+    display: flex;
+    flex-direction: row;
+    gap: 10px ;
+    cursor: pointer;
+}
+#edit img {
+    height: 15px;
+}
+
+#titleProjet {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 30px;
+    gap:31px;
+}
+#titleProjet h2 {
+    margin-bottom: 0px;
+}
+
+#titleProjet #edit{
+    align-items: center;
+
+}
