@@ -36,7 +36,18 @@ export async function addWork(token, formData) {
                 "Authorization": `Bearer ${token}`   
             },
             body: formData
-            });
+            })
+                .then((res) => {
+                    if(res.ok) {
+                        console.log('succes ', res.status)
+                    }else{
+                        throw new Error ('Error', res.status)
+                    }
+                })
+                .catch((error) =>{
+                    console.log(error)
+                })
+
     } catch(error) {
         console.log(error);
     }

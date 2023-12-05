@@ -41,9 +41,17 @@ export function loginLogout(){
 function quitEditMode(btnQuit,divNone) {
     btnQuit = document.querySelector(btnQuit);
     divNone = document.querySelector(divNone);
+    const overlay = document.querySelector("#overlay")
     btnQuit.addEventListener("click", () => {
         divNone.style.display = "none";
     })
+    overlay.addEventListener('click', (event) => {
+        if(event.target === overlay) {
+            divNone.style.display ="none"
+        }
+
+    })
+
 }
 function backEditMode(backMark) {
     const btnBack = document.querySelector(backMark);
@@ -75,6 +83,7 @@ export function editMode() {
     galleryEdit.addEventListener("click", deleteWork)
     quitEditMode("#xmark", "#overlay")
     backEditMode("#back_mark")
+
     })
 }
 
@@ -86,17 +95,27 @@ export async function deleteWork(event){
 
         const url = `http://localhost:5678/api/works/${projectId}`
         const confirmation = window.confirm('Êtes-vous sûr de vouloir supprimer le projet ' + projectId + ' ?');
+
+
         if(confirmation){
+            
             try{
                 await fetch(url, {
                     method: "DELETE",
                     headers: { Authorization: `Bearer ${token}`} 
                 })
+                console.log('Réponse du serveur :', response);
+
                 showWorkEdit(await fetchApi("works"));
                 showWork(await fetchApi("works"));
+
             }catch(error){
                 throw error
-            }    
+            }  
+
         }
+
     }
+
+
 }

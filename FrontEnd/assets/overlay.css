@@ -8,7 +8,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 2;
+    z-index: 1;
 }
 #modale_edit {
     background-color: white;
@@ -16,6 +16,7 @@
     max-width: 628px;
     width: 55%;
     overflow: auto;
+    z-index: 2;
 }
 
 #mark{
@@ -83,10 +84,21 @@
 
 #gallery_edit img{
     width: 100%;
+    object-fit: contain;
+    height: 100%;
+    
 }
 
 #gallery_edit figure{
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+#gallery_edit figcaption {
+
+
 }
 #gallery_edit div{
     display: flex;
@@ -167,7 +179,11 @@
     width: 50%;
     align-self: center;
 }
+#confirm_add_pic:disabled {
 
+    opacity: 0.5; 
+    cursor: not-allowed; 
+}
 #select_pic img {
     width: 20%;
 
